@@ -16,21 +16,53 @@
 <body>
     <h1>Pomodoro Timer & Countdown
     </h1>
-    <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-          <input type="radio" name="options" id="option1" autocomplete="off" checked>Pomodoro
+    <div class="menu_ptc btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
+        <label class="btn btn-secondary menu_pomodoro active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked>1
         </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option2" autocomplete="off"> Timer
+        <label class="btn btn-secondary menu_timer">
+            <input type="radio" name="options" id="option2" autocomplete="off"> 2
         </label>
-        <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option3" autocomplete="off"> Countdown
+        <label class="btn btn-secondary menu_countdown">
+            <input type="radio" name="options" id="option3" autocomplete="off"> 3
         </label>
+    </div>
+    <div class="container container_main">
+        <div class="card center_action">
+            <div class="card-body center_action">
+                <div class="card">
+                    Fancy icon
+                </div>
+                <div>
+                    <div class="progress">
+                        <div class="progress-bar  progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                            style="width:40%">
+                            40%
+                        </div>
+                    </div>
+                </div>
+                <div class="time values local">
+                    <label id="hours">00</label> :
+                    <label id="minutes">00</label> :
+                    <label id="seconds">00</label>
+                </div>
+                <div class="time values action">
+                    <label id="hours">00</label> :
+                    <label id="minutes">00</label> :
+                    <label id="seconds">00</label>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-dark">Start</button>
+                    <button type="button" class="btn btn-dark">Reset</button>
+                    <button type="button" class="btn btn-dark">Info</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <div class = "footer_identification">David</div>
-        <div class = "footer_icons" align="right">
+        <div class="footer_identification">David</div>
+        <div class="footer_icons" align="right">
             <button type="button" class="btn btn-dark">Twitter</button>
             <button type="button" class="btn btn-dark">Github</button>
             <button type="button" class="btn btn-dark">Linkedin</button>
