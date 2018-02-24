@@ -1,44 +1,44 @@
 body {
-    background-color: darkslategray;
+  background-color: darkslategray;
 }
 
 .menu_ptc {
-    position: fixed;
-    top: 34%;
+  position: fixed;
+  top: 34%;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: dimgray;
-    color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: dimgray;
+  color: white;
 }
 
 .footer_icons {
-    max-width: 300px;
-    text-align: right;
-    float: right;
+  max-width: 300px;
+  text-align: right;
+  float: right;
 }
 
 .footer_identification {
-    display: inline;
-    max-width: 100px;
+  display: inline;
+  max-width: 100px;
 }
 
 .container_main {
-    position: fixed;
-    margin-left: 113px;
-    height: 500px;
+  position: fixed;
+  margin-left: 113px;
+  height: 500px;
 }
 
 .center_action {
-    height: 500px;
-    background-color: goldenrod;
+  height: 500px;
+  background-color: goldenrod;
 }
 
 .header_Title {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
