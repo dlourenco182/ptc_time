@@ -37,3 +37,8 @@ footer {
     height: 500px;
     background-color: goldenrod;
 }
+
+.header_Title {
+    text-align: center;
+    color: white;
+}
