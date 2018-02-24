@@ -1,0 +1,20 @@
+body{
+    background-color: darkblue;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.footer_icons{
+    float: right;
+}
+
+.footer_identification{
+    max-width: 100px;
+}
