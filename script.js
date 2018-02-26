@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  $(".form_timer").hide();
   var myVar = setInterval(myTimer, 1000);
   var hoursLabel = document.getElementById("hours");
   var minutesLabel = document.getElementById("minutes");
@@ -38,7 +39,7 @@ $(document).ready(function () {
     clearInterval(myTimer);
     timer = null;
   });
-  
+
   $("#reset_button").click(function () {
     var hoursLabel = document.getElementById("hours");
     var minutesLabel = document.getElementById("minutes");
@@ -49,13 +50,19 @@ $(document).ready(function () {
     totalSeconds = 0;
   });
 
+  $("#info_button").click(function () {
+
+  
+  });
+
   $(".menu_pomodoro").click(function () {
-    $(".center_action").css("background-color", "red");
+    $(".card-body").css("background-color", "red");
   });
   $(".menu_timer").click(function () {
-    $(".center_action").css("background-color", "green");
+    $(".card-body").css("background-color", "green");
+    
   });
   $(".menu_countdown").click(function () {
-    $(".center_action").css("background-color", "blue");
+    $(".card-body").css("background-color", "blue");
   });
 });

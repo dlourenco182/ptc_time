@@ -34,11 +34,33 @@ footer {
 }
 
 .center_action {
-  height: 500px;
-  background-color: goldenrod;
+margin: 200px;
+
 }
 
 .header_Title {
   text-align: center;
   color: white;
+}
+
+.container_buttons{
+  color: white;
+}
+
+#example-number-input{
+  width: 100px;
+}
+
+.form_timer{
+  background-color: darkred;
+  z-index: 5;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;
 }

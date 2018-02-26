@@ -16,46 +16,45 @@
 <body>
 
     <div class="header_Title">
-        <h1>Pomodoro Timer & Countdown</h1>
+
     </div>
     <div class="menu_ptc btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons">
         <label class="btn btn-secondary menu_pomodoro active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked>1
+            <input type="radio" name="options" id="option1" autocomplete="off" checked>Pomodoro
         </label>
         <label class="btn btn-secondary menu_timer">
-            <input type="radio" name="options" id="option2" autocomplete="off"> 2
+            <input type="radio" name="options" id="option2" autocomplete="off">Timer
         </label>
         <label class="btn btn-secondary menu_countdown">
-            <input type="radio" name="options" id="option3" autocomplete="off"> 3
+            <input type="radio" name="options" id="option3" autocomplete="off">Countdown
         </label>
     </div>
-    <div class="container container_main">
-        <div class="card center_action">
-            <div class="card-body center_action">
-                <div class="card">
-                    Fancy icon
-                </div>
-                <div>
-                    <div class="progress">
-                        <div class="progress-bar  progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                            style="width:75%">
-                            75%
-                        </div>
-                    </div>
-                </div>
-                <div id="time_local"></div>
-                <div class="time values action">
-                    <label id="hours">00</label>:
-                    <label id="minutes">00</label>:
-                    <label id="seconds">00</label>
-                </div>
-                <div class="container_buttons">
-                    <button type="button" class="btn btn-dark" id="start_button">Start</button>
-                    <button type="button" class="btn btn-dark" id="pause_button">Pause</button>
-                    <button type="button" class="btn btn-dark" id="reset_button">Reset</button>
-                    <button type="button" class="btn btn-dark" id="info_button">Info</button>
+
+    <div class="card text-center center_action">
+        <div class="card-header ">
+            Pomodoro Timer & Countdown
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ICON HERE</h5>
+            <div class="progress">
+                <div class="progress-bar  progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                    style="width:75%">
+                    75%
                 </div>
             </div>
+            <div id="time_local"></div>
+            <div class="time values action">
+                <label id="hours">00</label>:
+                <label id="minutes">00</label>:
+                <label id="seconds">00</label>
+            </div>
+
+        </div>
+        <div class="card-footer text-muted">
+            <button type="button" class="btn btn-dark" id="start_button">Start</button>
+            <button type="button" class="btn btn-dark" id="pause_button">Pause</button>
+            <button type="button" class="btn btn-dark" id="reset_button">Reset</button>
+            <button type="button" class="btn btn-dark" id="info_button">Info</button>
         </div>
     </div>
 
