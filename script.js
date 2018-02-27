@@ -16,22 +16,72 @@ $(document).ready(function () {
 
   $("#start_button").click(function () {
 
-    myTimer = setInterval(setTimer, 1000);
+    if (jQuery.inArray("active", $('.menu_timer')[0].classList) > 0) {
 
-    function setTimer() {
-      ++totalSeconds;
-      secondsLabel.innerHTML = lapdigit(totalSeconds % 60);
-      minutesLabel.innerHTML = lapdigit(parseInt(totalSeconds / 60));
-    }
+      var hours = 6;
+      var minutes = 6;
+      var seconds = 6;
 
-    function lapdigit(val) {
-      var valString = val + "";
-      if (valString.length < 2) {
-        return "0" + valString;
-      } else {
-        return valString;
+      myTimer = setInterval(setTimer, 1000);
+
+      function setTimer() {
+
+        seconds--;
+
+        if (hours == 0 && minutes == 0 && seconds == 0) {
+          alert('success');
+        }
+
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+          if (minutes < 0) {
+            minutes = 59;
+            hours--;
+
+            if (hours <= 9) {
+              hours = '0' + hours;
+            }
+
+          }
+          if (minutes <= 9) {
+            minutes = '0' + minutes;
+          }
+        }
+
+        if (seconds <= 9) {
+          seconds = '0' + seconds;
+        }
+
+        document.getElementById("seconds").innerHTML = seconds;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("hours").innerHTML = hours;
+
       }
+
+
+
+
+    } else {
+      myTimer = setInterval(setTimer, 1000);
+
+      function setTimer() {
+        ++totalSeconds;
+        secondsLabel.innerHTML = lapdigit(totalSeconds % 60);
+        minutesLabel.innerHTML = lapdigit(parseInt(totalSeconds / 60));
+      }
+
+      function lapdigit(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+          return "0" + valString;
+        } else {
+          return valString;
+        }
+      }
+
     }
+
 
   });
 
@@ -52,7 +102,7 @@ $(document).ready(function () {
 
   $("#info_button").click(function () {
 
-  
+
   });
 
   $(".menu_pomodoro").click(function () {
@@ -60,7 +110,7 @@ $(document).ready(function () {
   });
   $(".menu_timer").click(function () {
     $(".card-body").css("background-color", "green");
-    
+
   });
   $(".menu_countdown").click(function () {
     $(".card-body").css("background-color", "blue");
