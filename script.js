@@ -1,11 +1,13 @@
 $(document).ready(function () {
 
+  var something = setInterval(progressbar_timer,1000);
   $(".form_timer").hide();
   var myVar = setInterval(myTimer, 1000);
   var hoursLabel = document.getElementById("hours");
   var minutesLabel = document.getElementById("minutes");
   var secondsLabel = document.getElementById("seconds");
   var totalSeconds = 0;
+  var progressbar_timer = null;
   var myTimer = null;
 
   function myTimer() {
@@ -13,6 +15,13 @@ $(document).ready(function () {
     document.getElementById("time_local").innerHTML = d.toLocaleTimeString();
   }
 
+  function progressbar_timer() {
+    var progress = Math.round($(".progress-bar-striped.active").width());
+    progress = Math.round((progress+100)/10)+'%';
+    if(progress ==100){clearInterval(progressbar_timer);}else{
+    $(".progress-bar-striped").css("width",progress);
+    $(".progress-bar-striped")[0].innerHTML = progress;}
+  }
 
   $("#start_button").click(function () {
 
