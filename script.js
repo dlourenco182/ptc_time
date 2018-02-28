@@ -22,7 +22,7 @@ $(document).ready(function () {
     }*/
 
   $("#start_button").click(function () {
-
+    Notification.requestPermission();
     if (jQuery.inArray("active", $('.menu_timer')[0].classList) > 0) {
       $(".progress-bar-striped").css("width", "0%");
       var hours = 0;
@@ -38,9 +38,6 @@ $(document).ready(function () {
 
         if (hours == 0 && minutes == 0 && seconds == 0) {
           var displayNotification = function(title, message){
-            // detect what type of notification should be
-            // used (WebNotification or a simple alert)
-            
               new Notification(title, {
                 icon : "notification.png",
                 body : message
